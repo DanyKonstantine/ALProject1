@@ -1,23 +1,16 @@
 page 50000 "Rental Sales Header"
 {
     
-    ApplicationArea = All;
     Caption = 'Rental Sales Header';
-    PageType = List;
+    PageType = Card;
     SourceTable = "DK Rentel Sales Header";
-    UsageCategory = Lists;
     
     layout
     {
         area(content)
         {
-            repeater(General)
+            group(General)
             {
-                field("Doc No."; Rec."Doc No.")
-                {
-                    ToolTip = 'Specifies the value of the Doc No. field.';
-                    ApplicationArea = All;
-                }
                 field("Customer Name"; Rec."Customer Name")
                 {
                     ToolTip = 'Specifies the value of the Customer Name  field.';
@@ -31,6 +24,11 @@ page 50000 "Rental Sales Header"
                 field(Data; Rec.Data)
                 {
                     ToolTip = 'Specifies the value of the Data field.';
+                    ApplicationArea = All;
+                }
+                field("Doc No."; Rec."Doc No.")
+                {
+                    ToolTip = 'Specifies the value of the Doc No. field.';
                     ApplicationArea = All;
                 }
                 field(Price; Rec.Price)

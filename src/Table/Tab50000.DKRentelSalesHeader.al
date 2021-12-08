@@ -14,12 +14,12 @@ table 50000 "DK Rentel Sales Header"
         {
             Caption = 'Salesperson No.';
             DataClassification = CustomerContent;
-            //TableRelation = 
         }
         field(40; "Salesperson Name"; Text[50])
         {
             Caption = 'Salesperson Name';
             DataClassification = CustomerContent;
+            TableRelation = "Salesperson/Purchaser"."DK Salesperson Name";
         }
         field(50; "Customer No."; Code[20])
         {
@@ -30,6 +30,7 @@ table 50000 "DK Rentel Sales Header"
         {
             Caption = 'Customer Name ';
             DataClassification = CustomerContent;
+            TableRelation = "Customer Amount"."DK Name";
         }
         field(70; Data; Date)
         {
