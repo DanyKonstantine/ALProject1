@@ -6,6 +6,7 @@ tableextension 50001 "DK Rental Customer" extends "Customer Amount"
         {
             Caption = 'No.';
             DataClassification = CustomerContent;
+            
         }
         field(50010; "DK Name"; Text[50])
         {
