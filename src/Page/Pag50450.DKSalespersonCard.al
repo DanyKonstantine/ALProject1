@@ -1,18 +1,15 @@
-page 50400 "DK Salespersons"
+page 50450 "DK Salesperson Card"
 {
 
-    ApplicationArea = All;
-    Caption = 'Salespersons';
-    PageType = List;
+    Caption = 'Salesperson Card';
+    PageType = Card;
     SourceTable = "Salesperson/Purchaser";
-    UsageCategory = Lists;
-    CardPageId = "DK Salesperson Card";
 
     layout
     {
         area(content)
         {
-            repeater(General)
+            group(General)
             {
                 field("DK No."; Rec."DK No.")
                 {
@@ -29,14 +26,14 @@ page 50400 "DK Salespersons"
                     ToolTip = 'Specifies the value of the Slaesperson Contact. field.';
                     ApplicationArea = All;
                 }
-                field("DK Salesperson Phone Number"; Rec."DK Salesperson Phone Number")
-                {
-                    ToolTip = 'Specifies the value of the Salesperson Phone Number field.';
-                    ApplicationArea = All;
-                }
                 field("DK Salesperson Email"; Rec."DK Salesperson Email")
                 {
                     ToolTip = 'Specifies the value of the Salesperson Email field.';
+                    ApplicationArea = All;
+                }
+                field("DK Salesperson Phone Number"; Rec."DK Salesperson Phone Number")
+                {
+                    ToolTip = 'Specifies the value of the Salesperson Phone Number field.';
                     ApplicationArea = All;
                 }
                 field("DK City"; Rec."DK City")

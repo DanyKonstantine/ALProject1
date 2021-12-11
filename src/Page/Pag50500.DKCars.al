@@ -6,6 +6,7 @@ page 50500 "DK Cars"
     PageType = List;
     SourceTable = Item;
     UsageCategory = Lists;
+    CardPageId = "DK Car Card";
 
     layout
     {

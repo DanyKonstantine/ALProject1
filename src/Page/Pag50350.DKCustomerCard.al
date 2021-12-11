@@ -1,18 +1,15 @@
-page 50300 "DK Customers"
+page 50350 "DK Customer Card"
 {
 
-    ApplicationArea = All;
-    Caption = 'Customers';
-    PageType = List;
+    Caption = 'Customer Card';
+    PageType = Card;
     SourceTable = "Customer Amount";
-    UsageCategory = Lists;
-    CardPageId = "DK Customer Card";
 
     layout
     {
         area(content)
         {
-            repeater(General)
+            group(General)
             {
                 field("DK No."; Rec."DK No.")
                 {
@@ -29,14 +26,14 @@ page 50300 "DK Customers"
                     ToolTip = 'Specifies the value of the Contact Name field.';
                     ApplicationArea = All;
                 }
-                field("DK Phone Number"; Rec."DK Phone Number")
-                {
-                    ToolTip = 'Specifies the value of the Phone Number field.';
-                    ApplicationArea = All;
-                }
                 field("DK Email"; Rec."DK Email")
                 {
                     ToolTip = 'Specifies the value of the Email field.';
+                    ApplicationArea = All;
+                }
+                field("DK Phone Number"; Rec."DK Phone Number")
+                {
+                    ToolTip = 'Specifies the value of the Phone Number field.';
                     ApplicationArea = All;
                 }
                 field("DK City"; Rec."DK City")
@@ -49,6 +46,11 @@ page 50300 "DK Customers"
                     ToolTip = 'Specifies the value of the Address field.';
                     ApplicationArea = All;
                 }
+                field("DK Discount"; Rec."DK Discount")
+                {
+                    ToolTip = 'Specifies the value of the Discount field.';
+                    ApplicationArea = All;
+                }
                 field("DK Order"; Rec."DK Order")
                 {
                     ToolTip = 'Specifies the value of the Order field.';
@@ -57,11 +59,6 @@ page 50300 "DK Customers"
                 field("DK Pledge"; Rec."DK Pledge")
                 {
                     ToolTip = 'Specifies the value of the Pledge field.';
-                    ApplicationArea = All;
-                }
-                field("DK Discount"; Rec."DK Discount")
-                {
-                    ToolTip = 'Specifies the value of the Discount field.';
                     ApplicationArea = All;
                 }
             }
