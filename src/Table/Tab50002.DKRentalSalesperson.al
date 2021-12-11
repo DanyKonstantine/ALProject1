@@ -23,14 +23,9 @@ tableextension 50002 "DK Rental Salesperson" extends "Salesperson/Purchaser"
             Caption = 'Salesperson Phone Number';
             DataClassification = CustomerContent;
         }
-        field(50350; "DK Salesperson Email"; Text[30])
+        field(50400; "DK Salesperson Email"; Text[30])
         {
             Caption = 'Salesperson Email';
-            DataClassification = CustomerContent;
-        }
-        field(50400; "DK Country"; Text[30])
-        {
-            Caption = 'Country';
             DataClassification = CustomerContent;
         }
         field(50500; "DK City"; Text[40])

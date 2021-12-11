@@ -6,7 +6,7 @@ tableextension 50001 "DK Rental Customer" extends "Customer Amount"
         {
             Caption = 'No.';
             DataClassification = CustomerContent;
-            
+
         }
         field(50010; "DK Name"; Text[50])
         {
@@ -28,11 +28,6 @@ tableextension 50001 "DK Rental Customer" extends "Customer Amount"
             Caption = 'Email';
             DataClassification = CustomerContent;
         }
-        field(50050; "DK Country"; Text[30])
-        {
-            Caption = 'Country';
-            DataClassification = CustomerContent;
-        }
         field(50060; "DK City"; Text[40])
         {
             Caption = 'City';
@@ -43,10 +38,15 @@ tableextension 50001 "DK Rental Customer" extends "Customer Amount"
             Caption = 'Address';
             DataClassification = CustomerContent;
         }
-
-        field(50080; "DK Sale"; Integer)
+        field(50075; "DK Pledge"; Text[50])
         {
-            Caption = 'Sale';
+            Caption = 'Pledge';
+            DataClassification = CustomerContent;
+        }
+
+        field(50080; "DK Order"; Text[50])
+        {
+            Caption = 'Order';
             DataClassification = CustomerContent;
         }
         field(50090; "DK Discount"; Decimal)

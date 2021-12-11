@@ -5,37 +5,56 @@ table 50101 "DK Rental Sales Line"
 
     fields
     {
-        field(10; "Line No,"; Code[20])
+        field(100; "Line No,"; Code[20])
         {
             Caption = 'Line No,';
             DataClassification = CustomerContent;
         }
-        field(20; "Item No."; Code[20])
+        field(150; "No,"; Code[20])
+        {
+            Caption = 'No,';
+            DataClassification = CustomerContent;
+        }
+        field(200; "Item No."; Code[20])
         {
             Caption = 'Item No.';
             DataClassification = CustomerContent;
         }
-        field(30; "Item Name"; Text[50])
+        field(300; "Item Name"; Text[50])
         {
             Caption = 'Item Name';
             DataClassification = CustomerContent;
         }
-        field(40; "Customer No."; Code[20])
+        field(400; "Customer No."; Code[20])
         {
             Caption = 'Customer No.';
             DataClassification = CustomerContent;
+            TableRelation = "Customer Amount"."DK No.";
         }
-        field(50; "Customer Name"; Text[50])
+        field(500; "Customer Name"; Text[50])
         {
             Caption = 'Customer Name';
             DataClassification = CustomerContent;
+            TableRelation = "Customer Amount"."DK Name";
         }
-        field(60; Standing; Duration)
+        field(550; "Salesperson No."; Text[50])
+        {
+            Caption = 'Salesperson No.';
+            DataClassification = CustomerContent;
+            TableRelation = "Salesperson/Purchaser"."DK No.";
+        }
+        field(525; "Salesperson Name"; Text[50])
+        {
+            Caption = 'Salesperson Name';
+            DataClassification = CustomerContent;
+            TableRelation = "Salesperson/Purchaser"."DK Salesperson Name";
+        }
+        field(600; Standing; Duration)
         {
             Caption = 'Standing';
             DataClassification = CustomerContent;
         }
-        field(70; Price; Integer)
+        field(700; Price; Integer)
         {
             Caption = 'Price';
             DataClassification = CustomerContent;

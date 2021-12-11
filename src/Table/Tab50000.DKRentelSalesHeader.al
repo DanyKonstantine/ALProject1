@@ -32,14 +32,14 @@ table 50000 "DK Rentel Sales Header"
             DataClassification = CustomerContent;
             TableRelation = "Customer Amount"."DK Name";
         }
-        field(70; Data; Date)
+        field(70; "Order Data"; Date)
         {
-            Caption = 'Data';
+            Caption = 'Order Data';
             DataClassification = CustomerContent;
         }
-        field(80; Price; Integer)
+        field(80; "Order Price"; Integer)
         {
-            Caption = 'Price';
+            Caption = 'Order Price';
             DataClassification = CustomerContent;
         }
     }
