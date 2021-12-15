@@ -1,55 +1,55 @@
-tableextension 50001 "DK Rental Customer" extends "Customer Amount"
+tableextension 50001 "DKRC Rental Customer" extends "Customer Amount"
 {
     fields
     {
-        field(50000; "DK No."; Code[20])
+        field(50000; "DKRC No."; Code[20])
         {
             Caption = 'No.';
             DataClassification = CustomerContent;
 
         }
-        field(50010; "DK Name"; Text[50])
+        field(50010; "DKRC Name"; Text[50])
         {
             Caption = 'Name';
             DataClassification = CustomerContent;
         }
-        field(50020; "DK Contact Name"; Text[50])
+        field(50020; "DKRC Contact Name"; Text[50])
         {
             Caption = 'Contact Name';
             DataClassification = CustomerContent;
         }
-        field(50030; "DK Phone Number"; Integer)
+        field(50030; "DKRC Phone Number"; Integer)
         {
             Caption = 'Phone Number';
             DataClassification = CustomerContent;
         }
-        field(50040; "DK Email"; Text[40])
+        field(50040; "DKRC Email"; Text[40])
         {
             Caption = 'Email';
             DataClassification = CustomerContent;
         }
-        field(50060; "DK City"; Text[40])
+        field(50060; "DKRC City"; Text[40])
         {
             Caption = 'City';
             DataClassification = CustomerContent;
         }
-        field(50070; "DK Address"; Text[50])
+        field(50070; "DKRC Address"; Text[50])
         {
             Caption = 'Address';
             DataClassification = CustomerContent;
         }
-        field(50075; "DK Pledge"; Text[50])
+        field(50075; "DKRC Pledge"; Text[50])
         {
             Caption = 'Pledge';
             DataClassification = CustomerContent;
         }
 
-        field(50080; "DK Order"; Text[50])
+        field(50080; "DKRC Order"; Text[50])
         {
             Caption = 'Order';
             DataClassification = CustomerContent;
         }
-        field(50090; "DK Discount"; Decimal)
+        field(50090; "DKRC Discount"; Decimal)
         {
             Caption = 'Discount';
             DataClassification = CustomerContent;
@@ -57,6 +57,6 @@ tableextension 50001 "DK Rental Customer" extends "Customer Amount"
     }
     keys
     {
-        key(PK; "DK No.") { }
+        key(PK; "DKRC No.") { }
     }
 }

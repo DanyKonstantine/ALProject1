@@ -1,9 +1,10 @@
-page 50100 "DK Sales Header"
+page 50100 "DKRC  Sales Header"
 {
 
     Caption = 'Sales Header';
     PageType = Document;
-    SourceTable = "DK Rentel Sales Header";
+    SourceTable = "DKRC Rentel Sales Header";
+    AutoSplitKey = true;
 
     layout
     {

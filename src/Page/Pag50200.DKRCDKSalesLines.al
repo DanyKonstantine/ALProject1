@@ -1,11 +1,12 @@
-page 50200 "DK Sales Lines"
+page 50200 "DKRC  Sales Lines"
 {
 
     ApplicationArea = All;
     Caption = 'Sales Lines ';
     PageType = List;
-    SourceTable = "DK Rental Sales Line";
+    SourceTable = "DKRC Rental Sales Line";
     UsageCategory = Lists;
+    AutoSplitKey = true;
 
     layout
     {
@@ -13,7 +14,7 @@ page 50200 "DK Sales Lines"
         {
             repeater(General)
             {
-                field("No,"; Rec."No,")
+                field("No,"; Rec."No.")
                 {
                     ToolTip = 'Specifies the value of the No, field.';
                     ApplicationArea = All;

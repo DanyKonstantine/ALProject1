@@ -1,4 +1,4 @@
-page 50450 "DK Salesperson Card"
+page 50450 "DKRC Salesperson Card"
 {
 
     Caption = 'Salesperson Card';
@@ -11,37 +11,37 @@ page 50450 "DK Salesperson Card"
         {
             group(General)
             {
-                field("DK No."; Rec."DK No.")
+                field("DK No."; Rec."DKRC No.")
                 {
                     ToolTip = 'Specifies the value of the No. field.';
                     ApplicationArea = All;
                 }
-                field("DK Salesperson Name"; Rec."DK Salesperson Name")
+                field("DK Salesperson Name"; Rec."DKRC Salesperson Name")
                 {
                     ToolTip = 'Specifies the value of the Salesperson Name field.';
                     ApplicationArea = All;
                 }
-                field("DK Salesperson Contact"; Rec."DK Salesperson Contact")
+                field("DK Salesperson Contact"; Rec."DKRC Salesperson Contact")
                 {
                     ToolTip = 'Specifies the value of the Slaesperson Contact. field.';
                     ApplicationArea = All;
                 }
-                field("DK Salesperson Email"; Rec."DK Salesperson Email")
+                field("DK Salesperson Email"; Rec."DKRC Salesperson Email")
                 {
                     ToolTip = 'Specifies the value of the Salesperson Email field.';
                     ApplicationArea = All;
                 }
-                field("DK Salesperson Phone Number"; Rec."DK Salesperson Phone Number")
+                field("DK Salesperson Phone Number"; Rec."DKRC Salesperson Phone Number")
                 {
                     ToolTip = 'Specifies the value of the Salesperson Phone Number field.';
                     ApplicationArea = All;
                 }
-                field("DK City"; Rec."DK City")
+                field("DK City"; Rec."DKRC City")
                 {
                     ToolTip = 'Specifies the value of the City field.';
                     ApplicationArea = All;
                 }
-                field("DK Address"; Rec."DK Address")
+                field("DK Address"; Rec."DKRC Address")
                 {
                     ToolTip = 'Specifies the value of the Address field.';
                     ApplicationArea = All;
