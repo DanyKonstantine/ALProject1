@@ -14,7 +14,7 @@ page 50400 "DKRC Salespersons"
         {
             repeater(General)
             {
-                field("DK No."; Rec."DKRC No.")
+                field("DKRC No."; Rec."DKRC No.")
                 {
                     ToolTip = 'Specifies the value of the No. field.';
                     ApplicationArea = All;

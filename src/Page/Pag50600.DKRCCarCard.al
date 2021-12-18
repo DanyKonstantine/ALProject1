@@ -11,7 +11,7 @@ page 50600 "DKRC Car Card"
         {
             group(General)
             {
-                field("DK Item No."; Rec."DKRC Item No.")
+                field("No."; Rec."No.")
                 {
                     ToolTip = 'Specifies the value of the No. field.';
                     ApplicationArea = All;

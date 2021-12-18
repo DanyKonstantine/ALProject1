@@ -1,10 +1,11 @@
 page 50100 "DKRC  Sales Header"
 {
-
+    Editable = false;
     Caption = 'Sales Header';
     PageType = Document;
     SourceTable = "DKRC Rentel Sales Header";
     AutoSplitKey = true;
+
 
     layout
     {
@@ -47,6 +48,11 @@ page 50100 "DKRC  Sales Header"
                     ToolTip = 'Specifies the value of the Order Price field.';
                     ApplicationArea = All;
                 }
+            }
+            part(SalesLines; "DKRC Rental Subform")
+            {
+                ApplicationArea = Basic, Suite;
+                UpdatePropagation = Both;
             }
         }
     }

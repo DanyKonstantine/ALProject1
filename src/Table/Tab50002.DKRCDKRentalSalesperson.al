@@ -6,7 +6,6 @@ tableextension 50002 "DKRC DK Rental Salesperson" extends "Salesperson/Purchaser
         {
             Caption = 'No.';
             DataClassification = CustomerContent;
-            //TableRelation = "DKRC Rentel Sales Header"."Salesperson No.";
         }
         field(50050; "DKRC Salesperson Contact"; Text[20])
         {

@@ -10,6 +10,10 @@ table 50101 "DKRC Rental Sales Line"
             Caption = 'Line No,';
             DataClassification = CustomerContent;
         }
+        field(125; "No. Series"; Code[20])
+        {
+            DataClassification = ToBeClassified;
+        }
         field(150; "No."; Code[20])
         {
             Caption = 'No.';
@@ -29,13 +33,13 @@ table 50101 "DKRC Rental Sales Line"
         {
             Caption = 'Customer No.';
             DataClassification = CustomerContent;
-            TableRelation = "Customer Amount"."DKRC No.";
         }
         field(500; "Customer Name"; Text[50])
         {
             Caption = 'Customer Name';
             DataClassification = CustomerContent;
-            TableRelation = "Customer Amount"."DKRC Name";
+            TableRelation = Customer.Name;
+
         }
         field(550; "Salesperson No."; Text[50])
         {
@@ -67,5 +71,26 @@ table 50101 "DKRC Rental Sales Line"
             Clustered = true;
         }
     }
+    trigger OnInsert()
+    begin
+        InitInsert();
+    end;
 
+    local procedure InitInsert()
+    var
+        NoSeriesMgt: Codeunit NoSeriesManagement;
+    begin
+        If Rec."No." <> '' then
+            exit;
+        NoSeriesMgt.InitSeries('A-ORD', '', 0D, Rec."No.", "No. Series");
+    end;
+
+    local procedure SetSustimer()
+    var
+        Customer: Record Customer;
+    begin
+        if Rec."Customer No." <> '' then begin
+            Rec."Customer No." := Customer."No.";
+        end;
+    end;
 }

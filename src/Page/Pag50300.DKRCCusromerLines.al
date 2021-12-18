@@ -1,15 +1,18 @@
-page 50350 "DKRC Customer Card"
+page 50300 "Cusromer Lines"
 {
 
-    Caption = 'Customer Card';
-    PageType = Card;
+    ApplicationArea = All;
+    Caption = 'Cusromer Lines';
+    PageType = List;
     SourceTable = Customer;
+    UsageCategory = Lists;
+    CardPageId = "DKRC Customer Card";
 
     layout
     {
         area(content)
         {
-            group(General)
+            repeater(General)
             {
                 field("No."; Rec."No.")
                 {

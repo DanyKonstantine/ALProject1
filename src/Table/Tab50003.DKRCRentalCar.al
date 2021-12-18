@@ -2,11 +2,6 @@ tableextension 50003 "DKRC Rental Car" extends Item
 {
     fields
     {
-        field(50000; "DKRC Item No."; Code[20])
-        {
-            Caption = 'No.';
-            DataClassification = CustomerContent;
-        }
         field(50100; "DKRC Car Model"; Text[50])
         {
             Caption = 'Model';
@@ -42,9 +37,5 @@ tableextension 50003 "DKRC Rental Car" extends Item
             Caption = 'Discount';
             DataClassification = CustomerContent;
         }
-    }
-    keys
-    {
-        key(PK; "DKRC Item No.") { }
     }
 }

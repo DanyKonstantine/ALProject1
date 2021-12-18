@@ -7,20 +7,20 @@ table 50000 "DKRC Rentel Sales Header"
     {
         field(10; "Doc No."; Code[20])
         {
-            Caption = 'Doc No.';
+            Caption = 'No.';
             DataClassification = CustomerContent;
+            TableRelation = "DKRC Rental Sales Line"."No.";
+            ValidateTableRelation = false;
         }
         field(20; "No. Series"; Code[20])
         {
             Caption = 'No. Series';
-            Editable = false;
-            TableRelation = "No. Series";
+            DataClassification = CustomerContent;
         }
         field(30; "Salesperson No."; Code[20])
         {
             Caption = 'Salesperson No.';
             DataClassification = CustomerContent;
-            //TableRelation = "Salesperson/Purchaser"."DKRC No.";
         }
         field(40; "Salesperson Name"; Text[50])
         {
@@ -29,14 +29,8 @@ table 50000 "DKRC Rentel Sales Header"
         }
         field(50; "Customer No."; Code[20])
         {
-            //TableRelation = "Customer Amount"."DKRC No.";
             Caption = 'Customer No.';
             DataClassification = CustomerContent;
-            //ValidateTableRelation = false;
-            /* trigger OnValidate()
-             begin
-                 SetCustomerName();
-             end;*/
         }
         field(60; "Customer Name"; Text[50])
         {
@@ -54,38 +48,19 @@ table 50000 "DKRC Rentel Sales Header"
             DataClassification = CustomerContent;
         }
     }
-    keys
-    {
-        key(PK; "Doc No.")
-        {
-            Clustered = true;
-        }
-    }
     trigger OnInsert()
     begin
-        // SetCustomerName();
-        InitInsert();
+        SetDokNo();
     end;
 
-    local procedure InitInsert()
+    local procedure SetDokNo()
     var
-        NoSeriesMgt: Codeunit NoSeriesManagement;
+        No: Record "DKRC Rental Sales Line";
     begin
-        If Rec."Doc No." <> '' then
+        Rec.FindLast();
+        if not Rec.Get("Doc No.") then begin
+            Rec.Insert();
+        end else
             exit;
-
-        NoSeriesMgt.InitSeries('A-ORD', '', 0D, Rec."Doc No.", "No. Series");
-    end;
-
-    local procedure SetCustomerName()
-    var
-        Customer: Record "Customer Amount";
-    begin
-        repeat
-            if (Rec."Customer No." = Customer."DKRC No.") then begin
-                Rec."Customer Name" := Customer."DKRC Name";
-                exit;
-            end;
-        until Customer.Next() = 0;
     end;
 }

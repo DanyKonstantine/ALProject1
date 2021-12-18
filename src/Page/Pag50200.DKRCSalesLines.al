@@ -6,7 +6,6 @@ page 50200 "DKRC  Sales Lines"
     PageType = List;
     SourceTable = "DKRC Rental Sales Line";
     UsageCategory = Lists;
-    AutoSplitKey = true;
 
     layout
     {
